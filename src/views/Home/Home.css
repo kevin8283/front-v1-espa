@@ -1,0 +1,13 @@
+.home-container {
+    display: flex;
+}
+
+.sidebar-container {
+    flex: 1;
+    background-color: #e4f3f5;
+}
+
+.body-container {
+    flex: 5;
+    background-color: #affab9;
+}
