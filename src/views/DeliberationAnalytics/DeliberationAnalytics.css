@@ -1,0 +1,28 @@
+.deliberation-analytics {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.deliberation-analytics-header {
+    flex: 1;
+    padding: 0.5vw;
+}
+
+.deliberation-analytics-body {
+    flex: 6;
+    padding: 0.5vw;
+}
+
+.analytics-header-title {
+    height: 100%;
+    font-size: 0.85rem;
+    color: #43374de0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.analytics-button {
+    margin-left: 2vw;
+}

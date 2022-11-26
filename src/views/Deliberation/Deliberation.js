@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import "./Deliberation.css"
 import { useHref, useNavigate } from "react-router"
 import { NavLink, Outlet } from "react-router-dom"
@@ -22,7 +22,7 @@ export default function Deliberation() {
                     Analysez les délibérations passées
                 </NavLink>| 
                 <NavLink to="/deliberation/predict" className="deliberation-link">
-                    Calculez la note de passage adéquate
+                    Calculez la moyenne de passage adéquate
                 </NavLink>
             </div>
         </header>
