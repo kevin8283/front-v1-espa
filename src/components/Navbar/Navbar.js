@@ -8,11 +8,15 @@ export default function Navbar() {
       <ul className="nav-links">
 
         <li className="nav-link">
+          <span className="logo">Logo goes here</span>
+        </li>
+
+        <li className="nav-link">
           <Link to="/dashboard" className="link">Dashboard</Link>
         </li>
 
         <li className="nav-link">
-          <Link to="/deliberation" className="link">Deliberation</Link>
+          <Link to="/deliberation" className="link">Déliberation</Link>
         </li>
 
       </ul>
