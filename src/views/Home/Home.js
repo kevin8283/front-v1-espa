@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react'
-import { Navbar, Header, Insights } from "../../components"
+import React, { useState } from 'react'
+import { Navbar, Header } from "../../components"
+import { useNavigate } from "react-router"
+import { Outlet } from "react-router-dom"
 import "./Home.css"
-
-import { api } from "../../services"
 
 export default function Home() {
 
@@ -13,7 +13,7 @@ export default function Home() {
         </aside>
         <div className="body-container">
           <Header/>
-          <Insights/>
+          <Outlet/>
         </div>
     </div>
   )
