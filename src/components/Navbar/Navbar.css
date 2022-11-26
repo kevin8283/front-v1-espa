@@ -27,9 +27,15 @@
     margin-left: 1vw;
 }
 
-.logo {
+.logo-container {
+    margin-right: 2vw;
     margin-bottom: auto;
     margin-top: 5vh;
+}
+
+.logo {
+    width: 15vw;
+    height: auto;
 }
 
 .logout {

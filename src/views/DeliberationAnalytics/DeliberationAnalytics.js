@@ -25,7 +25,7 @@ export default function DeliberationAnalytics() {
         .catch(e => {
             throw e
         })
-  })
+  }, [])
 
   return (
     <div className="deliberation-analytics">

@@ -2,14 +2,15 @@ import React from 'react'
 import './Navbar.css'
 import { NavLink } from "react-router-dom"
 import { LineAxis, Settings, Book, QuestionAnswer, Info, Logout } from "@mui/icons-material"
+import Logo from "../../assets/smart-analytics-logo2.png"
 
 export default function Navbar() {
   return (
     <div className="navbar">
       <ul className="nav-links">
 
-        <li className="nav-link logo">
-          <span className="logo">Logo goes here</span>
+        <li className="nav-link logo-container">
+          <span><img src={Logo} className="logo"/></span>
         </li>
 
         <li className="nav-link">
