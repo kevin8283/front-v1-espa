@@ -1,0 +1,57 @@
+.deliberation-predict {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.deliberation-predict-header {
+    flex: 1;
+    padding-top: 1vh;
+    margin-bottom: 2vh;
+}
+
+.deliberation-predict-title {
+    font-weight: 500;
+    margin-left: 2vw;
+    color: #aa5571;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.deliberation-predict-body {
+    flex: 8;
+    width: 100%;
+}
+
+.deliberation-predict-form-group {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.deliberation-input-container {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.button-container {
+    margin-top: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.result-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4vh;
+}
+
+.deliberation-result {
+    font-weight: 600;
+    color: #aa5571;
+    font-size: 2rem;
+}

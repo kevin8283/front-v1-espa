@@ -5,6 +5,7 @@ import LineChart from "./LineChart/LineChart"
 import BarChart from "./BarChart/BarChart"
 import DataTable from "./DataTable/DataTable"
 import ColoredButton from "./ColoredButton/ColoredButton"
+import CustomTextField from "./CustomTextField/CustomTextField"
 
 export { 
     Navbar,
@@ -13,5 +14,6 @@ export {
     LineChart,
     BarChart,
     DataTable,
-    ColoredButton 
+    ColoredButton,
+    CustomTextField 
 }
