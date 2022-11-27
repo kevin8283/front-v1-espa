@@ -17,7 +17,6 @@ export default function DeliberationPredict() {
   const [polCrisis, setPolCrisis] = useState(0)
   const [mtoCrisis, setMtoCrisis] = useState(0)
   const [weeklyStudy, setWeeklyStudy] = useState("")
-  const [mentions, setMentions] = useState([])
   const [error, setError] = useState(false)
   const [openResultModal, setOpenResultModal] = useState(false)
   const [deliberationResult, setDeliberationResult] = useState(0)
@@ -85,16 +84,6 @@ export default function DeliberationPredict() {
   const closeResultModal = () =>  {
     setOpenResultModal(false)
   }
-
-  useEffect(() => {
-    api.fetchMentions()
-      .then(response => {
-        setMentions(response.data)
-      })
-      .catch(e => {
-        throw e
-      })
-  }, [])
 
   return (
     <div className="deliberation-predict">
@@ -170,12 +159,12 @@ export default function DeliberationPredict() {
             </div>
             <div className="deliberation-input-container">
               <FormControl>
-                <InputLabel id="cr_san">Crise météorologique</InputLabel>
+                <InputLabel id="cr_mto">Crise météorologique</InputLabel>
                 <Select
-                  labelId="cr_san"
-                  label="Crise sanitaire"
+                  labelId="cr_mto"
+                  label="Crise météorologique"
                   onChange={handleMtoCrisis}
-                  value={sanCrisis}
+                  value={mtoCrisis}
                   sx={sx}
                 >
                   <MenuItem value={1}>Oui</MenuItem>

@@ -1,0 +1,32 @@
+.orientation {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.orientation-header {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 5vw;
+    border-bottom: 2px solid #5c443e3a;
+}
+
+.orientation-header-title {
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #614741;
+}
+
+.orientation-header-sub-title {
+    color: #4b3935b6;
+    font-style: italic;
+    font-size: 0.95rem;
+}
+
+.orientation-body {
+    flex: 6;
+    padding-top: 2.5vh;
+}

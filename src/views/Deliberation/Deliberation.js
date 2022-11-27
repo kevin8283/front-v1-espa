@@ -8,8 +8,8 @@ export default function Deliberation() {
   const href = useHref()
 
   useEffect(() => {
-    if (href === "/deliberation" || href === "/deliberation/") {
-      navigate("/deliberation/analytics")
+    if (href === "/home/deliberation" || href === "/home/deliberation/") {
+      navigate("/home/deliberation/analytics")
     }
   }, [])
 
@@ -18,10 +18,10 @@ export default function Deliberation() {
         <header className="deliberation-header">
             <div className="header-title">Délibérations</div>
             <div className="header-sub-title">
-                <NavLink to="/deliberation/analytics" className="deliberation-link">
+                <NavLink to="/home/deliberation/analytics" className="deliberation-link">
                     Analysez les délibérations passées
                 </NavLink>| 
-                <NavLink to="/deliberation/predict" className="deliberation-link">
+                <NavLink to="/home/deliberation/predict" className="deliberation-link">
                     Calculez la moyenne de passage adéquate
                 </NavLink>
             </div>

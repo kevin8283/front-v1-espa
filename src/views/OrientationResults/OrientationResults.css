@@ -1,0 +1,52 @@
+.orientation-results {
+    display: flex;
+    flex-direction: column;
+}
+
+.orientation-results-header {
+    top: 0;
+    z-index: 8;
+    position: sticky;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 5vw;
+    border-bottom: 2px solid #5c443e3a;
+    background: #ffffff;
+}
+
+.orientation-results-header-title {
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #614741;
+}
+
+.orientation-results-header-sub-title {
+    color: #4b3935b6;
+    font-style: italic;
+    font-size: 0.95rem;
+}
+
+.orientation-results-body {
+    padding-top: 2.5vh;
+}
+
+.orientation-results-list-container {
+    padding-left: 4vw;
+    margin-left: 5vw;
+}
+
+.orientation-results-list-item {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.mention-rank {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #614741;
+    margin-right: 2.5vw;
+}
