@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { Navigate } from "react-router-dom"
+import { Navigate, Link } from "react-router-dom"
 import { TextField, Dialog, DialogTitle } from "@mui/material"
+import { ArrowBackIos } from '@mui/icons-material'
 import { ColoredButton } from "../../components"
 import { api } from '../../services'
 import "./Orientation.css"
@@ -108,11 +109,19 @@ export default function Orientation() {
   return (
     <div className="orientation">
       <header className="orientation-header">
-        <div className="orientation-header-title">
-          Pas d'idée sur quelle mention au sein de l'ESPA intégrer ?
+        <div className="orientation-header-left">
+          <div className="orientation-header-title">
+            Pas d'idée sur quelle mention au sein de l'ESPA intégrer ?
+          </div>
+          <div className="orientation-header-sub-title">
+            Entrez vos estimations à propos de vos connaissances dans chaque domaine (notes sur 20)
+          </div>
         </div>
-        <div className="orientation-header-sub-title">
-          Entrez vos estimations à propos de vos connaissances dans chaque domaine (notes sur 20)
+        <div className="orientation-header-right">
+            <Link className="orientation-link" to="/">
+                <ArrowBackIos/>
+                Retourner à l'accueil
+            </Link>
         </div>
       </header>
       <section className="orientation-body">

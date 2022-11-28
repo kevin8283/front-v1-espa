@@ -7,7 +7,7 @@ export default function Landing() {
   return (
     <div className="landing">
       <header className="landing-header">
-        " All great projects start with a blink "
+        Powered by <a href="nodejs.org">Node</a>, <a href="reactjs.org">React</a> & <a href="tensorflow.org">Tensorflow</a>
       </header>
       <section className="landing-body">
         <section className="landing-left-section">

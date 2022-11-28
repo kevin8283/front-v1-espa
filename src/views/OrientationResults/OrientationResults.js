@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from 'react'
-import { useLocation } from 'react-router'
+import { useLocation, useNavigate } from 'react-router'
+import { Link } from 'react-router-dom'
 import { api } from '../../services'
 import "./OrientationResults.css"
 import List from '@mui/material/List'
 import ListItem from '@mui/material/ListItem'
 import ListItemText from '@mui/material/ListItemText'
 import Typography from '@mui/material/Typography'
+import { ArrowBackIos } from '@mui/icons-material'
 
 export default function OrientationResults() {
   const [mentions, setMentions] = useState([])
   const [displayableResults, setDisplayableResults] = useState([])
   const location = useLocation()
-  const data = location.state.results
+  const navigate = useNavigate()
 
   useEffect(() => {
     api.fetchMentions()
@@ -24,7 +26,11 @@ export default function OrientationResults() {
   }, [])
 
   useEffect(() => {
-    data.forEach(result => {
+    if (location.state === null) {
+      navigate("/orientation")
+    }
+    else {
+      location.state.results.forEach(result => {
         for (let i = 0; i < mentions.length; i++) {
           if (result.field === mentions[i].sigle) {
             if (displayableResults.length < 5) {
@@ -34,6 +40,7 @@ export default function OrientationResults() {
         }
       }
   })
+    }
   }, [mentions])
 
   const displayResults = () => {
@@ -65,11 +72,19 @@ export default function OrientationResults() {
   return (
     <div className="orientation-results">
       <header className="orientation-results-header">
-        <div className="orientation-results-header-title">
-          Parcours recommandés pour vous selon vos compétences
+        <div className="orientation-results-header-left">
+          <div className="orientation-results-header-title">
+            Pas d'idée sur quelle mention au sein de l'ESPA intégrer ?
+          </div>
+          <div className="orientation-results-header-sub-title">
+            Entrez vos estimations à propos de vos connaissances dans chaque domaine (notes sur 20)
+          </div>
         </div>
-        <div className="orientation-results-header-sub-title">
-          Ces données proviennent des calculs d'un modèle de Réseau de Neurones
+        <div className="orientation-results-header-right">
+            <Link className="orientation-results-link" to="/orientation">
+                <ArrowBackIos/>
+                Réessayer
+            </Link>
         </div>
       </header>
       <main className="orientation-results-body">
