@@ -1,0 +1,14 @@
+.thesis-analytics {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.thesis-analytics-legend {
+    margin-top: 5vh;
+    font-style: italic;
+    font-weight: 400;
+    color: #664531
+}

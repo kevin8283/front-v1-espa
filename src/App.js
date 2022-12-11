@@ -1,6 +1,7 @@
 import { Home, Login, Orientation, OrientatioResults,
         Deliberation, Dashboard, 
-        DeliberationAnalytics, DeliberationPredict, Landing } from './views'
+        DeliberationAnalytics, DeliberationPredict, Landing, Thesis, 
+        ThesisAnalytics, ThesisRecommendation} from './views'
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom"
 import './App.css'
 
@@ -15,6 +16,10 @@ function App() {
           <Route path="deliberation" element={<Deliberation/>}>
               <Route path="analytics" element={<DeliberationAnalytics/>}/>
               <Route path="predict" exact element={<DeliberationPredict/>}/>
+          </Route>
+          <Route path="thesis" element={<Thesis/>}>
+              <Route path="analytics" element={<ThesisAnalytics/>}/>
+              <Route path="recommend" element={<ThesisRecommendation/>}/>
           </Route>
         </Route>
         <Route path="orientation" element={<Orientation/>}/>

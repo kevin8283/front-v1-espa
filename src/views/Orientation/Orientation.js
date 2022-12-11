@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Navigate, Link } from "react-router-dom"
 import { TextField, Dialog, DialogTitle } from "@mui/material"
 import { ArrowBackIos } from '@mui/icons-material'
@@ -97,14 +97,20 @@ export default function Orientation() {
 
       api.recommendOrientation(body)
           .then(response => {
+            console.log(response.data)
             setResults(response.data)
-            setShouldNavigate(true)
           })
           .catch(e => {
             throw e
           })
     }
   }
+
+  useEffect(() => {
+    if (results.length > 0) {
+      setShouldNavigate(true)
+    }
+  }, [results])
 
   return (
     <div className="orientation">

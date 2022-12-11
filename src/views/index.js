@@ -7,6 +7,9 @@ import OrientatioResults from "./OrientationResults/OrientationResults"
 import DeliberationAnalytics from "./DeliberationAnalytics/DeliberationAnalytics"
 import DeliberationPredict from "./DeliberationPredict/DeliberationPredict"
 import Landing from "./Landing/Landing"
+import Thesis from "./Thesis/Thesis"
+import ThesisAnalytics from "./ThesisAnalytics/ThesisAnalytics"
+import ThesisRecommendation from "./ThesisRecommendation/ThesisRecommendation"
 
 export {
     Landing,
@@ -17,5 +20,8 @@ export {
     Orientation,
     OrientatioResults,
     DeliberationAnalytics,
-    DeliberationPredict
+    DeliberationPredict,
+    Thesis,
+    ThesisAnalytics,
+    ThesisRecommendation
 }

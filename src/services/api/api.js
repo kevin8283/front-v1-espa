@@ -152,6 +152,42 @@ const api = {
         catch (error) {
             return error
         }
+    },
+
+    fetchTheses: async () => {
+        const uri = "http://localhost:8000/api/v1/thesis"
+
+        try {
+            const response = await axios.get(uri)
+            return response
+        } 
+        catch (error) {
+            return error    
+        }
+    },
+
+    getSamplesPerJobDomains: async () => {
+        const uri = "http://localhost:8000/api/v1/thesis/job/samples"
+
+        try {
+            const response = await axios.get(uri)
+            return response    
+        } 
+        catch (error) {
+            return error
+        }
+    },
+
+    getSamplesPerThesisDomains: async () => {
+        const uri = "http://localhost:8000/api/v1/thesis/theses/samples"
+
+        try {
+            const response = await axios.get(uri)
+            return response    
+        } 
+        catch (error) {
+            return error
+        }
     }
 }
 

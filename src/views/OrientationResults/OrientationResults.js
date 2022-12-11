@@ -30,6 +30,7 @@ export default function OrientationResults() {
       navigate("/orientation")
     }
     else {
+      console.log(location.state)
       location.state.results.forEach(result => {
         for (let i = 0; i < mentions.length; i++) {
           if (result.field === mentions[i].sigle) {
