@@ -194,7 +194,7 @@ export default function DeliberationPredict() {
             </ColoredButton>
         </div>
         <Dialog onClose={closeModal} open={error}>
-          <DialogTitle>Veuillez remplir tous le champs</DialogTitle>
+          <DialogTitle>Veuillez remplir tous les champs</DialogTitle>
         </Dialog>
         <Dialog onClose={closeResultModal} open={openResultModal}>
           <div className="result-container">

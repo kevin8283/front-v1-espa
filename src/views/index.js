@@ -10,6 +10,7 @@ import Landing from "./Landing/Landing"
 import Thesis from "./Thesis/Thesis"
 import ThesisAnalytics from "./ThesisAnalytics/ThesisAnalytics"
 import ThesisRecommendation from "./ThesisRecommendation/ThesisRecommendation"
+import Settings from "./Settings/Settings"
 
 export {
     Landing,
@@ -23,5 +24,6 @@ export {
     DeliberationPredict,
     Thesis,
     ThesisAnalytics,
-    ThesisRecommendation
+    ThesisRecommendation,
+    Settings
 }

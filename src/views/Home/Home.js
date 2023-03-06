@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { Navbar } from "../../components"
 import { useNavigate, useHref } from "react-router"
 import { Outlet } from "react-router-dom"
+import axios from "axios"
 import "./Home.css"
 
 export default function Home() {
@@ -13,6 +14,17 @@ export default function Home() {
       if (href==="/home" || href==="/home/") {
         navigate("/home/dashboard")
       }
+  }, [])
+
+  useEffect(() => {
+      axios.get("http://localhost:8000/api/v1/verify-token", {withCredentials: true})
+      .then(response => {
+
+      })
+      .catch(e => {
+        console.log(e)
+        navigate("/login")
+      })
   }, [])
 
   return (

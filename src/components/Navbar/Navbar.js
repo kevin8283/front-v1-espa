@@ -4,6 +4,7 @@ import { useNavigate } from "react-router"
 import { NavLink, Link } from "react-router-dom"
 import { LineAxis, Settings, Book, QuestionAnswer, Info, Logout } from "@mui/icons-material"
 import Logo from "../../assets/smart-analytics-logo2.png"
+import { api } from '../../services'
 
 export default function Navbar() {
   const navigate = useNavigate()
@@ -11,7 +12,13 @@ export default function Navbar() {
   const logout = (event) => {
     event.preventDefault()
 
-    navigate("/")
+    api.logout()
+    .then(() => {
+      navigate("/")
+    })
+    .catch(e => {
+      console.log(e)
+    })
   }
 
   return (
@@ -44,7 +51,7 @@ export default function Navbar() {
         </li>
 
         <li className="nav-link">
-          <NavLink to="setting" className="link">
+          <NavLink to="settings" className="link">
             <span className="link-logo"><Settings /></span>
             <span className="link-text">Paramètres</span>
           </NavLink>

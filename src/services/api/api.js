@@ -188,6 +188,30 @@ const api = {
         catch (error) {
             return error
         }
+    },
+    
+    verifyToken: async () => {
+        const uri = "http://localhost:8000/api/v1/verify-token"
+
+        try {
+            const response = await axios.get(uri, {withCredentials: true})
+            return response
+        }
+        catch (error) {
+            return error
+        }
+    },
+
+    logout: async () => {
+        const uri = "http://localhost:8000/api/v1/auth/logout"
+
+        try {
+            const response = await axios.get(uri, {withCredentials: true})
+            return response    
+        } 
+        catch (error) {
+            return error
+        }
     }
 }
 
